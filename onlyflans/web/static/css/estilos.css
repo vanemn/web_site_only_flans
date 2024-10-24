@@ -1,3 +1,8 @@
+/*font-awesome link para footer */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
 h1
 {color: blue;
 background-color: rgb(120, 210, 220);}
+
