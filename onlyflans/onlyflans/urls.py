@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from web.views import index, about,welcome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='index'),  # Ruta para el índice
+    path('about/', about, name='about'),  # Ruta para acerca
+    path('welcome/', welcome, name='welcome'),  # Ruta para bienvenido cliente
+
 ]
