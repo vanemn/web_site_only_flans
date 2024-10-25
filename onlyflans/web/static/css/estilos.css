@@ -6,3 +6,20 @@ h1
 {color: blue;
 background-color: rgb(120, 210, 220);}
 
+.header {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+.navbar {
+    padding: 0;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer{
+    padding: 0;
+    border: none;
+}
