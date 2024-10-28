@@ -1,8 +1,13 @@
 from django.shortcuts import render
+from .models import * 
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html',{})
+    products = Product.objects.all()
+    products_private =Product.objects.filter(is_private =True)
+
+    context = {'products':products}
+    return render(request, 'index.html',context)
 
 def about(request):
     return render(request, 'about.html',{})
