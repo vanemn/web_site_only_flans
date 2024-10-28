@@ -23,3 +23,9 @@ background-color: rgb(120, 210, 220);}
     padding: 0;
     border: none;
 }
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
