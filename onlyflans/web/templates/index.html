@@ -41,66 +41,78 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<p>NUESTROS PRODUCTOS</p>
+<br>
 
-<div class="row">
-  <div class="col-lg-4">
-      <div class="box-element product">
-
-      </div>
-  </div>
-
-  <div class="col-lg-4">
-      <div class="box-element product">
-          
-      </div>
-  </div>
-
-  <div class="col-lg-4">
-      <div class="box-element product">
-
-      </div>
-      
-  </div>
-</div>
+  <!--caja box-element product -->
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
-      <img src="https://picsum.photos/id/365/367/267" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="https://picsum.photos/id/365/367/267" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="https://picsum.photos/id/365/367/267" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <img class="thumbnail" src="{% static 'img/placeholder.png' %}"> 
+          <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+            <div class="box-element product">
+              <h6><strong>Product</strong></h6>
+              <hr>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card-add">
+          <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+          <a class="btn btn-outline-success" href="#">View</a>
+          <h4 style="display: inline-block; float: right"><strong>$20.000</strong></h4>
+        <br>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
       </div>
     </div>
+    <div class="col">
+      <div class="card h-100">
+          <img class="thumbnail" src="https://picsum.photos/id/365/367/267"> 
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+              <div class="box-element product">
+                <h6><strong>Product</strong></h6>
+                <hr>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="card-add">
+            <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20.000</strong></h4>
+          <br>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+            <img class="thumbnail" src="{% static 'img/placeholder.png' %}"> 
+              <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+                <div class="box-element product">
+                  <h6><strong>Product</strong></h6>
+                  <hr>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="card-add">
+              <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+              <a class="btn btn-outline-success" href="#">View</a>
+              <h4 style="display: inline-block; float: right"><strong>$20.000</strong></h4>
+            <br>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
   </div>
-</div>
+
 {% endblock %}
 
 

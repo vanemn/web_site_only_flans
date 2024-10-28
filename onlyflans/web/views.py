@@ -9,3 +9,6 @@ def about(request):
 
 def welcome(request):
     return render(request, 'welcome.html',{})
+
+def cart(request):
+    return render(request, 'cart.html',{})
