@@ -4,9 +4,8 @@ from .models import *
 # Create your views here.
 def index(request):
     products = Product.objects.all()
-    products_private =Product.objects.filter(is_private =True)
-
-    context = {'products':products}
+    products_public = Product.objects.filter(is_private=False) 
+    context = {'products': products_public}
     return render(request, 'index.html',context)
 
 def about(request):

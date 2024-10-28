@@ -46,6 +46,7 @@
   <!--caja box-element product -->
 <div class="row row-cols-1 row-cols-md-3 g-4">
   {% for product in products %}
+    {% if not product.is_private %}
   <div class="col">
     <div class="card h-100">
         <img class="thumbnail" src="{% static 'img/placeholder.png' %}"> 
@@ -71,6 +72,7 @@
         </div>
       </div>
     </div>
+     {% endif %}
     {% endfor %}
   </div>
 
