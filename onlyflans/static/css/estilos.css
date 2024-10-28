@@ -50,11 +50,21 @@ background-color: rgb(120, 210, 220);}
 	border-radius: 4px;
 	padding: 10px;
 }
+.carousel-inner {
+    max-height: 700px; /* Ajusta esta altura según tus necesidades */
+}
+
+.carousel-item-img {
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    height: 80%; /* La imagen ocupa toda la altura del contenedor */
+	object-position: center; /* Centra la imagen */
+	width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+}
 
 /*a las cart/imagenes -index */
 .thumbnail{
 	width: 100%;
-	height: 200px;
+	height: 80%;
 	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
     -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
     box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
