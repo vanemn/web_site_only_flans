@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from web.views import index, about,welcome,cart, checkout
+from web.views import index, about,welcome,cart, checkout,updateItem
 
 
 urlpatterns = [
@@ -25,4 +25,5 @@ urlpatterns = [
     path('welcome/', welcome, name='welcome'),  # Ruta para bienvenido cliente
     path('cart/', cart, name='cart'),
     path('checkout/', checkout, name='checkout'),
+    path('update_item/', updateItem, name="update_item"),
 ]
