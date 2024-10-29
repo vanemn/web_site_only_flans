@@ -2,32 +2,19 @@
 {% load static %}
 {% block title %}Welcome{% endblock %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido cliente</title>
-</head>
-<body>
-
-    <div class="container">
-      <!--imagen principal-->
-        <div class="py-5 text-center">
-          <img
-            class="d-block mx-auto mb-4"
-            src="{% static 'img/img1.jpeg' %}"
-            alt=""
-            width="172"
-            height="157"
-          />
-          <!--descripcion y agradecimiento-->
-          <h2>bienvenido</h2>
-          <p class="lead">
+<div class="container mt-5">
+    <div class="col-12 col-md-6 offset-md-3 mt-4 mb-4">
+        <h2 class="text-center">Gracias por contactarnos {{ form.customer_name }}</h2>
+        <p>Thank you for contacting us. We will get back to you shortly.</p>
+    </div>
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="{% static 'img/img1.jpeg' %}" alt="" width="172" height="157" />
+        <h2>Bienvenido  {{ form.customer_name }}</h2>
+        <p class="lead">
             Below is an example form built entirely with Bootstrap’s form
             controls. Each required form group has a validation state that can be
             triggered by attempting to submit the form without completing it.
-          </p>
-        </div>
-      </body>       
+        </p>
+    </div>
+</div>
 {% endblock %}

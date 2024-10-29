@@ -27,5 +27,5 @@ urlpatterns = [
     path('cart/', cart, name='cart'),
     path('checkout/', checkout, name='checkout'),
     path('update_item/', updateItem, name="update_item"),
-    path('accounts/',include('django.contrib.auth.urls'))
+    path('accounts/',include('django.contrib.auth.urls')),
 ]

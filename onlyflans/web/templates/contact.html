@@ -1,49 +1,51 @@
 {% extends "layout.html" %}
 {% load static %}
-{% block title %}Welcome{% endblock %}
+{% block title %}Contact{% endblock %}
 {% block content %}
-
 <div class="container mt-5">
     <div class="col-12 col-md-6 offset-md-3 mt-4 mb-4">
         <h2 class="text-center">Contact Us</h2>
     </div>
-    
-    <form action="/contact" method="post" >
-            {% csrf_token %}
-
-            {{ form.non_field_errors }}
-            <br>
-        <div class="mb-3 text-center">
-        <label for="{{ form.customer_name.id_for_label }}" class="form-label">
-            {{ form.customer_name.label_tag }}
-        </label>
-        <div>
-            {{ form.customer_name}}
-        </div>
-        <div class="mb-3 text-dager">
-        {{form.customer_name.errors}}
-        </div>
+    <form action="{% url 'contact' %}" method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <br>
         <div class="mb-3 text-center">
             <label for="{{ form.customer_name.id_for_label }}" class="form-label">
+                {{ form.customer_name.label_tag }}
+            </label>
+            <div>
+                {{ form.customer_name }}
+            </div>
+            <div class="mb-3 text-danger">
+                {{ form.customer_name.errors }}
+            </div>
+        </div>
+        <div class="mb-3 text-center">
+            <label for="{{ form.customer_email.id_for_label }}" class="form-label">
                 {{ form.customer_email.label_tag }}
             </label>
             <div>
-                {{ form.customer_email}}
+                {{ form.customer_email }}
             </div>
-            <div class="mb-3 text-dager">
-            {{form.customer_email.errors}}
+            <div class="mb-3 text-danger">
+                {{ form.customer_email.errors }}
             </div>
-            <div class="mb-3 text-center">
-                <label for="{{ form.customer_name.id_for_label }}" class="form-label">
-                    {{ form.message.label_tag }}
-                </label>
-                <div>
-                    {{ form.message}}
-                </div>
-
-            <button type="submit" value="submit" class="btn btn-primary ">Send</button>
-        
-         </div>
+        </div>
+        <div class="mb-3 text-center">
+            <label for="{{ form.message.id_for_label }}" class="form-label">
+                {{ form.message.label_tag }}
+            </label>
+            <div>
+                {{ form.message }}
+            </div>
+            <div class="mb-3 text-danger">
+                {{ form.message.errors }}
+            </div>
+        </div>
+        <div class="text-center"> 
+            <button type="submit" value="submit" class="btn btn-primary">Send</button>
+        </div>
     </form>
 </div>
 {% endblock %}
