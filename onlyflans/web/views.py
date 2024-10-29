@@ -9,7 +9,9 @@ def contact(request):
         form = ContactFormForm(request.POST)
         if form.is_valid():
           form.save()
-        return redirect('welcome')  
+#+++++++consultar COMOOOO LO ENVÍO +++++++
+        return redirect('welcome.html')  
+    
     else:
        form = ContactFormForm()
     # contact_form= ContactForm.objects.create(**form.cleaned_data)
@@ -28,15 +30,9 @@ def about(request):
     return render(request, 'about.html',{})
 
 def welcome(request):
-    if request.user.is_authenticated:
-        customer = request.user.customer
-        order, created = Order.objects.get_or_create(customer=customer, complete=False)
-        items = order.orderitem_set.all()
-    else:
-		#Cracion de carro vacio para empezar
-        items = []
-    context = {'items':items}
+    context = {}
     return render(request, 'welcome.html',context)
+  
 
 def cart(request):
     return render(request, 'cart.html',{})
