@@ -2,6 +2,17 @@ from django.db import models
 from django.contrib.auth.models import User
 import uuid
 
+
+
+class ContactForm(models.Model):
+    contact_form_uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    customer_email = models.EmailField(max_length=254)
+    customer_name = models.CharField(max_length=64)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.customer_name
+
 # Modelo Product
 class Product(models.Model):
     product_uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)

@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from web.views import index, about,welcome,cart, checkout,updateItem
-
+from web.views import index, about,welcome,cart, checkout,updateItem,contact
 
 urlpatterns = [
+    path('contact/', contact, name='contact'),
     path('admin/', admin.site.urls),
     path('', index, name='index'),  # Ruta para el índice
     path('about/', about, name='about'),  # Ruta para acerca

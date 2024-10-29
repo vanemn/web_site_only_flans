@@ -1,6 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import * 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse,HttpResponseRedirect
+from .forms import ContactFormForm  
+from .models import ContactForm
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactFormForm(request.POST)
+        if form.is_valid():
+          form.save()
+        return redirect('welcome')  
+    else:
+       form = ContactFormForm()
+    # contact_form= ContactForm.objects.create(**form.cleaned_data)
+    
+    return render(request, 'contact.html', {'form': form})
+    #return HttpResponseRedirect('welcome')
 
 # Create your views here.
 def index(request):
