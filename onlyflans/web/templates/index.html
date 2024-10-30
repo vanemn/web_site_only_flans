@@ -64,11 +64,11 @@
         <div class="card-add">
           <button data-product="{{product.uuid}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
           <a class="btn btn-outline-success" href="#">View</a>
-          <h4 style="display: inline-block; float: right"><strong>${{ product.price }}</strong></h4>
+          <h4 style="display: inline-block; float: right; color: green;"><strong>${{ product.price }}</strong></h4>
         <br>
         </div>
         <div class="card-footer">
-          <small class="text-muted">Last {{ product.slug }}</small>
+          <small class="text-muted">cuenta con delivery: {{ product.delivery }}</small>
         </div>
       </div>
     </div>
