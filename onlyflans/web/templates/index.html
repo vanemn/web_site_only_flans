@@ -49,10 +49,10 @@
     {% if not product.is_private %}
   <div class="col">
     <div class="card h-100">
-        <img class="thumbnail" src="{% static 'img/placeholder.png' %}"> 
+    <img class="thumbnail" src="{% static 'img/placeholder.png' %}"> 
         <!--<img src="{{ product.imagen_url }}" alt="Imagen de {{ product.title }}"-->
         <!--consultar con respecto a la imagen-->
-        <!--{% if product.imagen_url %} <img src="{{ product.imagen_url }}" alt="Imagen de {{ product.titulo }}"> {% else %} <img src="{% static 'ruta/img/imagen_predeterminada.jpg' %}" alt="Imagen predeterminada"> {% endif %}-->
+        <!--{% if product.imagen_url %} <img src="{{ product.imagen_url }}" alt="Imagen de {{ product.titulo }}"> {% else %} <img src="{{products.image}}" alt="Imagen predeterminada"> {% endif %}-->
           <div class="card-body">
           <h5 class="card-title"></h5>
             <div class="box-element product">

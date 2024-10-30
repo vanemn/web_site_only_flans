@@ -17,7 +17,7 @@ class Product(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField()
     image_url = models.URLField(max_length=200,null=True, blank=True)
-    #imagen = models.ImageField(upload_to='imagenes/')
+    image = models.ImageField(null=True,blank=True)
     slug = models.SlugField(unique=True)
     is_private = models.BooleanField(default=False)
     price = models.DecimalField(max_digits=10, decimal_places=0, default=0)  # Agregaré a lo solicitado en actividad
