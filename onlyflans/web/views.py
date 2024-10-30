@@ -8,13 +8,12 @@ def contact(request):
         form = ContactFormForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('welcome')  # Redirige a la página de bienvenida
+            return redirect('welcome') 
     else:
         form = ContactFormForm()
     return render(request, 'contact.html', {'form': form})
 
 
-# Create your views here.
 def index(request):
     products = Product.objects.all()
     products_public = Product.objects.filter(is_private=False) 
